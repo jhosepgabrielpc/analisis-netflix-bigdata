@@ -1,0 +1,6 @@
+hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar \
+  -files /tmp/02_mapper_actores.py,/tmp/02_reducer_actores.py \
+  -mapper /tmp/02_mapper_actores.py \
+  -reducer /tmp/02_reducer_actores.py \
+  -input /data/netflix/clean/netflix_clean.csv \
+  -output /data/netflix/results/actores/
